@@ -30,7 +30,10 @@ with open('taxes.csv', 'w') as csvfile:
 
 for year in range(1999,2013) :
   for quarter in range(1,5) :
-    url = 'https://www.revenue.state.il.us/app/kob/KOBReport?r=Specific&p=%s%s&m=0160001' % (year, quarter)
+    url = str('https://www.revenue.state.il.us/app/kob/KOBReport?r=Specific&p='
+              + str(year)
+              + str(quarter)
+              + '&m=0160001')
 
     response = urllib2.urlopen(url)
 
