@@ -66,6 +66,7 @@ for year in range(1999,2013) :
                 num_tax_payers = header_text.split(':')
                 num_tax_payers = num_tax_payers[1]
                 num_tax_payers = num_tax_payers.strip()
+                num_tax_payers = num_tax_payers.replace(',','')
 
                 headers.append(num_tax_payers)
             else:
@@ -85,6 +86,7 @@ for year in range(1999,2013) :
         for tax_body in tax_info :
             muni, county, num_taxpayers = tax_body[0]
             for taxes in tax_body[1] :
-                tax_row = [muni, county, num_tax_payers, taxes[0], year, quarter]
+                tax_row = [muni, county, num_taxpayers, taxes[0], year, quarter]
                 tax_row.extend(taxes[1])
+                print tax_row
                 csvwriter.writerow(tax_row)
