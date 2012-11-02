@@ -249,8 +249,27 @@ the revenues. For this we are going to do some simple string processing, which w
 here.
 
 
+gra_tax_list.py
 
+We are close, but notice that the same tax name appears more than once. The results reports the the Chicago taxes that are 
+collected from retailers located in Cook County separately from the retailers located in DuPage count (it's just few by O'Hare).
+Going back to the source we can see that these two sets of results are in sibling tables. The opening tags have the form
 
+```html
+<TABLE WIDTH="600" BORDER=0 CELLPADDING=0 CELLSPACING=0>
+```
 
+This is a little hard to see because of the formatting of the source. Fortunately, BeautifulSoup can pretty the 
+source up for us, so the hierarchy is easier to see.
 
+beautify_results.py
 
+We'll want to grab the county info, and the number of taxpayers while we are at it.
+
+complete_page.py
+
+So we have all the results from one page. Now let's grab all the pages, and write the results into a comma delimited file.
+
+direct_example.py
+
+That's all folks
