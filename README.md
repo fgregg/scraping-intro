@@ -295,7 +295,7 @@ can be pretty tricky to figure out exactly what the right POST request is. Tools
 or [Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/) are invaluable in tracing what
 requests get what results.
 * [ScraperWiki](https://scraperwiki.com/) is a repository of scraping programs. You can find many useful patterns and inspiration here.
-* Open Gov Hack Night. Every Tuesday at 1871 in the Merchandise Mart, Chicago developers working with open data get together to work on projects
+* [Open Gov Hack Night](http://opengovhacknight.eventbrite.com/): Every Tuesday at 1871 in the Merchandise Mart, Chicago developers working with open data get together to work on projects
   and learn from each other. Many folks have written many scrapers, and you can get some good help here.
 
 
