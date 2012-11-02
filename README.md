@@ -291,12 +291,12 @@ the first place. Let's make some simple graphs.
 
 * [Post Requests](http://en.wikipedia.org/wiki/POST_%28HTTP%29): We discussed one of the major ways of making requests to websites -- encoding the request in the addres. We 
 can also make requests in what are called the message bodies. Many, more complicated websites use this other POST method. It
-can be pretty tricky to figure out exactly what the right POST request is. Tools like (Firebug)[http://getfirebug.com/] 
-or (Chrome Developer Tools)[https://developers.google.com/chrome-developer-tools/] are invaluable in tracing what
+can be pretty tricky to figure out exactly what the right POST request is. Tools like [Firebug](http://getfirebug.com/) 
+or [Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/) are invaluable in tracing what
 requests get what results.
-
 * [ScraperWiki](https://scraperwiki.com/) is a repository of scraping programs. You can find many useful patterns and inspiration here.
-
+* Open Gov Hack Night. Every Tuesday at 1871 in the Merchandise Mart, Chicago developers working with open data get together to work on projects
+  and learn from each other. Many folks have written many scrapers, and you can get some good help here.
 
 
 
