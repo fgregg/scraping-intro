@@ -118,12 +118,12 @@ for other places. We'll return to these issue after we talk a little bit about H
 web pages.
 
 ## Parsing Results
-So we make a request to a website, and if all goes well, it responds with a big blob of text that is valid HTML. 
-HTML is a mixture of text and a directions of how to layout that text or where to grab images or make links. Your browser
-interprets those directions and makes pretty things for you, but it's startes with this text that website sent you.
-browswer. Let's look at some of that text right now.
+When we make a valid request to a website, it responds with an blob of text that is an HTML document. HTML is a 
+mixture of text and a directions of how to layout that text. Your browser interprets those directions and makes 
+pretty and complicated things for you, but it all starts with the HTML that the website sent you. 
+Let's look at some of HTML right now.
 
-On a (results page)[https://www.revenue.state.il.us/app/kob/KOBReport?p=20121&m=0160001]. If you have a two button 
+On a (results page)[https://www.revenue.state.il.us/app/kob/KOBReport?p=20122&m=0160001]. If you have a two button 
 mouse click on the page with your left button. If you have a Mac, CMD-Click. You should see a menu that has an option called
 'View Source.' Select it. See... it's just a bunch of text.
 
