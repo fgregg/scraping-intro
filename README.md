@@ -46,10 +46,10 @@ On the state's site, I could not find any prohibition against scraping the site 
 [Legal Notices](http://tax.illinois.gov/AboutIdor/LegalNotices.htm) page or anywhere else. 
 
 # Let's do this!
-Let's go to the tantalizingly named [Standard Industrial Classification (SIC) Code Reporting](https://www.revenue.state.il.us/app/kob/index.jsp), and click on
-the link to 'Specific Muncipalities and Counties.' We get a page that has a form where we can select a reporting period, a
-municipal or county government, and a tax type. Let's keep the default for the reporting period and select 'Chicago' from
-the drowp down list 'Municipal or County Government Name'. Then click 'Start Search.'
+Let's go to the tantalizingly named [Standard Industrial Classification (SIC) Code Reporting](https://www.revenue.state.il.us/app/kob/index.jsp), 
+and click on the link to 'Specific Muncipalities and Counties.' We get a page that has a form where we can select a 
+reporting period, a municipal or county government, and a tax type. Let's keep the default for the reporting period and 
+select 'Chicago' from the drop down list 'Municipal or County Government Name'. Then click 'Start Search.'
 
 If all goes well, we get a page that shows us Chicago's tax information for the most recent reporting period.
 
@@ -74,7 +74,7 @@ starting with the '?,' is a request
 
     r=Specific&p=20122&m=0160001&c=000&t=00&x=95&y=12
 
-We are saying to some program on their end, 'please give me the resource that corresponds 
+We are saying to some program on their end, 'Give me the resource that corresponds 
 to a request with the following parameters.'
 
     r : Specific
