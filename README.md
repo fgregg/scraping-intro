@@ -1,4 +1,4 @@
-A High Level Introduction to Scraping
+An Introduction to Scraping
 ====
 
 # What's the question?
