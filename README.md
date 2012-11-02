@@ -284,7 +284,19 @@ we'll call `taxes.csv`.
 Once we have the `taxes.csv`, the scraping is done and we move on to do whatever we wanted to do with the data in
 the first place. Let's make some simple graphs. 
 
-![Sales](https://github.com/fgregg/scraping-intro/blob/master/sales.png)
+![Sales](https://github.com/fgregg/scraping-intro/raw/master/sales.png)
+![Sales](https://github.com/fgregg/scraping-intro/raw/master/retailers.png)
+
+# More topics and resources
+
+* [Post Requests](http://en.wikipedia.org/wiki/POST_%28HTTP%29): We discussed one way of the major ways of making requests to websites -- encoding the request in the addres. We 
+can also make requests in what are called the message bodies. Many, more complicated websites use this other POST method. It
+can be pretty tricky to figure out exactly what the right POST request is. Tools like (Firebug)[http://getfirebug.com/] 
+or (Chrome Developer Tools)[https://developers.google.com/chrome-developer-tools/] are invaluable in tracing what
+requests get what results.
+
+* [ScraperWiki](https://scraperwiki.com/) is a repository of scraping programs. You can find many useful patterns and inspiration here.
+
 
 
 
