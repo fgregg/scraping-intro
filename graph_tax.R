@@ -1,5 +1,3 @@
-library(cairoDevice)
-
 taxes <- read.csv("taxes.csv", header=TRUE)
 
 chicago_rate = c(rep(.01, 24), rep(.0125, 28))
