@@ -1,5 +1,6 @@
 import csv
 import urllib2
+import time
 from BeautifulSoup import BeautifulSoup
 
 column_names = ['municipality',
@@ -93,3 +94,6 @@ for year in range(1999,2013) :
                 tax_row.extend(taxes[1])
                 print tax_row
                 csvwriter.writerow(tax_row)
+
+    # pause for a few seconds before making the next request
+    time.sleep(5)
