@@ -123,7 +123,7 @@ mixture of text and a directions of how to layout that text. Your browser interp
 pretty and complicated things for you, but it all starts with the HTML that the website sent you. 
 Let's look at some of HTML right now.
 
-On a (results page)[https://www.revenue.state.il.us/app/kob/KOBReport?p=20122&m=0160001]. If you have a two button 
+On a [results page](https://www.revenue.state.il.us/app/kob/KOBReport?p=20122&m=0160001). If you have a two button 
 mouse click on the page with your left button. If you have a Mac, CMD-Click. You should see a menu that has an option called
 'View Source.' Select it. See... it's just a bunch of text.
 
