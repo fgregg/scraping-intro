@@ -175,6 +175,28 @@ Alright let's return to the source of our results page and see what we can learn
 that is has a name attribute 'Query1'. Next notice that there is a `<select>` tag which has the name 'p'. It has lots of 
 `<option>` children for the different reporting periods. 
 
+```html
+<FORM METHOD="get" NAME="Query1" ACTION="KOBReport">
+<INPUT TYPE="HIDDEN" NAME="r" VALUE="Specific">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=3>
+<TR>
+<TD COLSPAN=2 NOWRAP>
+Report Period:
+<SELECT NAME="p">
+<OPTION SELECTED VALUE="20122">2012 2nd quarter - Sales made during April, May, and June 2012</OPTION>
+<OPTION VALUE="20121">2012 1st quarter - Sales made during January, February, and March 2012</OPTION>
+<OPTION VALUE="20110">2011 Calendar Year - Sales made during January 2011 through December 2011</OPTION>
+...
+<OPTION VALUE="19994">1999 4th quarter - Sales made during October, November, and December 1999</OPTION>
+<OPTION VALUE="19993">1999 3rd quarter - Sales made during July, August, and September 1999</OPTION>
+<OPTION VALUE="19980">1998 Calendar Year - Sales made during January 1998 through December 1998</OPTION>
+<OPTION VALUE="19970">1997 Calendar Year - Sales made during January 1997 through December 1997</OPTION>
+<OPTION VALUE="19960">1996 Calendar Year - Sales made during January 1996 through December 1996</OPTION>
+<OPTION VALUE="19950">1995 Calendar Year - Sales made during January 1995 through December 1995</OPTION>
+<OPTION VALUE="19940">1994 Calendar Year - Sales made during January 1994 through December 1994</OPTION>
+</SELECT>
+```
+
 We can learn a few things. First, for the quarterly reports, the value of 'p' is the year and quarter as we suspected. 
 However we also see that sometimes the last digit is 0, and that corresonds to a yearly reporting period. We also see 
 that the first reporting period is for the 1994 year, and that quarterly reporting seemed to start in the third quarter 
@@ -182,6 +204,17 @@ of 1999.
 
 Moving to the next `<select>` tag 'm', we see the municipal code for Illinois cities in the value options of the `<option>`
 children. We don't see a lot of rhyme or reason, but we now know where to look for other muncipality codes.
+
+```html
+<SELECT NAME="m">
+<OPTION VALUE="0000000">[SELECT]</OPTION>
+<OPTION VALUE="0480002">Abingdon</OPTION>
+<OPTION VALUE="0015000">Adams County Government</OPTION>
+...
+<OPTION VALUE="0280020">Zeigler</OPTION>
+<OPTION VALUE="0490030">Zion</OPTION>
+</SELECT>
+```
 
 Let's move on to the data.
 
@@ -192,18 +225,17 @@ The revenue data are enclosed in `<td>` tags
 ```html
 <TD CLASS="data" ALIGN="right" VALIGN="top" NOWRAP>
 <CENTER><B>ST</B></CENTER>
-<BR>
-110,253.50<BR>
-58,454.54<BR>
-<BR>
-12,928.33<BR>
-
-30,355.80<BR>
-245,903.73<BR>
-14,348.21<BR>
-64,284.99<BR>
-716.23<BR>
-655,471.43<BR><BR></TD>
+18,887,148.64<BR>
+16,185,354.22<BR>
+62,117,172.52<BR>
+17,352,693.36<BR>
+14,166,524.92<BR>
+7,891,375.77<BR>
+32,494,883.62<BR>
+29,752,400.16<BR>
+20,989,444.21<BR>
+4,220,617.81<BR>
+224,057,615.23<BR><BR></TD>
 ```
 
 
