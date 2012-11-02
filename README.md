@@ -220,11 +220,13 @@ Let's move on to the data.
 
 ### Extracting the data
 
-The revenue data are enclosed in `<td>` tags
+What we would like to do is find some distinguishin pattern that lets us just grab the data we want.
+
+Let's start by noticing that the revenue data are enclosed in `<td>` tags and that these tags have some arguments.
 
 ```html
 <TD CLASS="data" ALIGN="right" VALIGN="top" NOWRAP>
-<CENTER><B>ST</B></CENTER>
+<CENTER><B>ST</B></CENTER>b
 18,887,148.64<BR>
 16,185,354.22<BR>
 62,117,172.52<BR>
@@ -237,6 +239,16 @@ The revenue data are enclosed in `<td>` tags
 4,220,617.81<BR>
 224,057,615.23<BR><BR></TD>
 ```
+
+Our first script will grab all the parts of page that have that pattern.
+
+grab_tax_raw.py
+
+Well that worked. Let's extend this a little bit py processing the text inside the `<td>` tags and get the an array of 
+the revenues. For this we are going to do some simple string processing, which we are not going to explain in detail
+here.
+
+
 
 
 
