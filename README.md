@@ -51,6 +51,7 @@ the drowp down list 'Municipal or County Government Name'. Then click 'Start Sea
 If all goes well, we get a page that shows us Chicago's tax information for the most recent reporting period.
 
 Our task is to write a computer program that 
+
 1. Requests Chicago's tax information for every reporting period
 2. Extracts the relevant data from the results of those requests
 
@@ -128,13 +129,16 @@ Some pieces of text are enclosed in angle brackets: <>. These are called tags an
 Most tags come in pairs, which are called start and end tags. For example the paragraph tag is `<p>`, and the way 
 that you say that bunch of sentences are a paragraph are to put them between opening and closing paragraph tags:
 
-    <p>This is a pretty short paragraph</p>
+```html
+<p>This is a pretty short paragraph</p>
+```
     
 Some tags have additional options, like the link tag `<a>` if this tag has an `href` option (standing for hypertext 
 reference), then the enclosed text will be a clickable link to the value of the `href` option. 
 
-    <a href="http://google.com">This text will be shown clickable as a link to http://google.com</a>
-
+```html
+<a href="http://google.com">This text will be shown clickable as a link to http://google.com</a>
+```
 One important consequence of tags coming in start and end pairs is that an HTML document can be modeled as a hierarchy. 
 Everything between a start and close tag can be seen as *child* of that tag. For example the short HTML document
 
@@ -242,17 +246,13 @@ Let's start by noticing that the revenue data are enclosed in `<td>` tags and th
 
 Our first script will grab all the parts of page that have that pattern.
 
-```python
-python grab_tax_raw.py
-```
+    python grab_tax_raw.py
 
 Well that worked. Let's extend this a little bit py processing the text inside the `<td>` tags and get the an array of 
 the revenues. For this we are going to do some simple string processing, which we are not going to explain in detail
 here.
 
-```python
-python grab_tax_list.py
-```
+    python grab_tax_list.py
 
 We are close, but notice that the same tax name appears more than once. The results reports the the Chicago taxes that are 
 collected from retailers located in Cook County separately from the retailers located in DuPage count (it's just few by O'Hare).
@@ -265,20 +265,16 @@ Going back to the source we can see that these two sets of results are in siblin
 This is a little hard to see because of the formatting of the source. Fortunately, BeautifulSoup can pretty the 
 source up for us, so the hierarchy is easier to see.
 
-```python
-python beautify_results.py
-```
+    python beautify_results.py
 
 We'll want to grab the county info, and the number of taxpayers while we are at it.
 
-```python
-python complete_page.py
-```
+    python complete_page.py
+
 
 So we have all the results from one page. Now let's grab all the pages, and write the results into a comma delimited file.
 
-```python
-python direct_example.py
-```
+    python direct_example.py
+
 
 That's all folks
