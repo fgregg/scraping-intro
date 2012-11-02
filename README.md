@@ -180,7 +180,8 @@ If we want identify the last paragraph, we can refer to it as the second child o
 ## Back to the Source
 Alright let's return to the source of our results page and see what we can learn. First let's find the `<form>` tag. Notice
 that is has a name attribute 'Query1'. Next notice that there is a `<select>` tag which has the name 'p'. It has lots of 
-`<option>` children for the different reporting periods. 
+`<option>` children for the different reporting periods. It we hadn't guessed it, viewing the source would have
+let us know that the 'p' parameter corresponded to the reporting period.
 
 ```html
 <FORM METHOD="get" NAME="Query1" ACTION="KOBReport">
@@ -204,10 +205,10 @@ Report Period:
 </SELECT>
 ```
 
-We can learn a few things. First, for the quarterly reports, the value of 'p' is the year and quarter as we suspected. 
-However we also see that sometimes the last digit is 0, and that corresonds to a yearly reporting period. We also see 
-that the first reporting period is for the 1994 year, and that quarterly reporting seemed to start in the third quarter 
-of 1999.
+We can learn a few more things from the source. First, for the quarterly reports, the value of 'p' is the year and 
+quarter as we suspected. However we also see that sometimes the last digit is 0, and that corresonds to a yearly 
+reporting period. We also see that the first reporting period is for the 1994 year, and that quarterly reporting 
+seemed to start in the third quarter of 1999.
 
 Moving to the next `<select>` tag 'm', we see the municipal code for Illinois cities in the value options of the `<option>`
 children. We don't see a lot of rhyme or reason, but we now know where to look for other muncipality codes.
@@ -227,7 +228,7 @@ Let's move on to the data.
 
 ### Extracting the data
 
-What we would like to do is find some distinguishin pattern that lets us just grab the data we want.
+What we would like to do is find some distinguishing pattern that lets us just grab the data we want.
 
 Let's start by noticing that the revenue data are enclosed in `<td>` tags and that these tags have some arguments.
 
@@ -252,8 +253,7 @@ Our first script will grab all the parts of page that have that pattern.
     python grab_tax_raw.py
 
 Well that worked. Let's extend this a little bit py processing the text inside the `<td>` tags and get the an array of 
-the revenues. For this we are going to do some simple string processing, which we are not going to explain in detail
-here.
+the revenues. For this we are going to do some simple string processing.
 
     python grab_tax_list.py
 
@@ -275,9 +275,16 @@ We'll want to grab the county info, and the number of taxpayers while we are at 
     python complete_page.py
 
 
-So we have all the results from one page. Now let's grab all the pages, and write the results into a comma delimited file.
+So we have all the results from one page. Now let's grab all the pages, and write the results into a comma delimited file
+we'll call `taxes.csv`.
 
     python direct_example.py
 
+## Payoff
+Once we have the `taxes.csv`, the scraping is done and we move on to do whatever we wanted to do with the data in
+the first place. Let's make some simple graphs. 
 
-That's all folks
+![Sales](https://github.com/fgregg/scraping-intro/blob/master/sales.png)
+
+
+
