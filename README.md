@@ -123,13 +123,89 @@ On a (results page)[https://www.revenue.state.il.us/app/kob/KOBReport?p=20121&m=
 mouse click on the page with your left button. If you have a Mac, CMD-Click. You should see a menu that has an option called
 'View Source.' Select it. See... it's just a bunch of text.
 
+### Basics of HTML
 Some pieces of text are enclosed in angle brackets: <>. These are called tags and are directions on how to layout the site. 
-Most tags come in pairs, which are called opening and closing tags. For example the paragraph tag is `<p>`, and the way 
+Most tags come in pairs, which are called start and end tags. For example the paragraph tag is `<p>`, and the way 
 that you say that bunch of sentences are a paragraph are to put them between opening and closing paragraph tags:
 
     <p>This is a pretty short paragraph</p>
     
-    
+Some tags have additional options, like the link tag `<a>` if this tag has an `href` option (standing for hypertext 
+reference), then the enclosed text will be a clickable link to the value of the `href` option. 
+
+    <a href="http://google.com">This text will be shown clickable as a link to http://google.com</a>
+
+One important consequence of tags coming in start and end pairs is that an HTML document can be modeled as a hierarchy. 
+Everything between a start and close tag can be seen as *child* of that tag. For example the short HTML document
+
+```html
+<html>
+    <head>
+        <title>
+            Example of Hierarchy
+        </title>
+    </head>
+    <body>
+        <p>
+            A short paragraph with a <a href='http://google.com'>link</a>.
+        </p>
+        <p>
+            Another short paragraph
+        </p>
+    </body>
+</html>
+```
+
+can be seen as having this hierachy
+```
+html    
+  - head (child of html)
+    - title (child of head, grandchild of head)  
+  - body (child of html)
+    - p (chid of body, grandchild of html)
+      - a (child of p, grandchild of body, great-grandchild of html)
+    - p (chid of body, grandchild of html)
+```
+
+This hierarchy is very useful because it means that we can refer unambiguously to every element of an HTML document. 
+If we want identify the last paragraph, we can refer to it as the second child of the second child of the html tag.
+
+## Back to the Source
+Alright let's return to the source of our results page and see what we can learn. First let's find the `<form>` tag. Notice
+that is has a name attribute 'Query1'. Next notice that there is a `<select>` tag which has the name 'p'. It has lots of 
+`<option>` children for the different reporting periods. 
+
+We can learn a few things. First, for the quarterly reports, the value of 'p' is the year and quarter as we suspected. 
+However we also see that sometimes the last digit is 0, and that corresonds to a yearly reporting period. We also see 
+that the first reporting period is for the 1994 year, and that quarterly reporting seemed to start in the third quarter 
+of 1999.
+
+Moving to the next `<select>` tag 'm', we see the municipal code for Illinois cities in the value options of the `<option>`
+children. We don't see a lot of rhyme or reason, but we now know where to look for other muncipality codes.
+
+Let's move on to the data.
+
+### Extracting the data
+
+The revenue data are enclosed in `<td>` tags
+
+```html
+<TD CLASS="data" ALIGN="right" VALIGN="top" NOWRAP>
+<CENTER><B>ST</B></CENTER>
+<BR>
+110,253.50<BR>
+58,454.54<BR>
+<BR>
+12,928.33<BR>
+
+30,355.80<BR>
+245,903.73<BR>
+14,348.21<BR>
+64,284.99<BR>
+716.23<BR>
+655,471.43<BR><BR></TD>
+```
+
 
 
 
