@@ -5,11 +5,11 @@ An Introduction to Scraping
 
 Say we are interested in consumer spending in Chicago. We'd like to know how total level of spending changes over time 
 as well as how Chicagoans shift what they spend their money on. Maybe we are interested because it its an indicator 
-of future changes or maybe its connects to some theory we would like to test. Unfortunately, a typical source, like 
+of future changes or maybe its connects to some theory we would like to test. A typical source, like 
 the national [Consumer Expenditure Survey](http://en.wikipedia.org/wiki/Consumer_Expenditure_Survey), can't really tell 
 us that much about Chicago consumers.
 
-Fortunately, Illinois's Department of Revenue publishes quarterly sales tax revenue by municipality or county and 
+Happily, Illinois's Department of Revenue publishes quarterly sales tax revenue by municipality or county and 
 breaks out revenue by industrial classifications groupings. Unfortunately, these data are not nicely packaged and 
 ready for download. They are only available online through a Department of Revenue 
 website: https://www.revenue.state.il.us/app/kob/index.jsp 
