@@ -1,4 +1,4 @@
-Video: http://www.youtube.com/watch?v=yCcSP3GQhho
+Video: <a href="http://www.youtube.com/watch?v=yCcSP3GQhho"><img src="http://i2.ytimg.com/vi/yCcSP3GQhho/default.jpg" /></a>
 
 An Introduction to Scraping
 ====
