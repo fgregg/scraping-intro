@@ -1,3 +1,5 @@
+Video: http://www.youtube.com/watch?v=yCcSP3GQhho
+
 An Introduction to Scraping
 ====
 
