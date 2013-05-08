@@ -6,10 +6,9 @@ In order to go through this tutorial, you need to have
 * the python library BeautifulSoup
 * the python library mechanize
 
-<a href="http://www.youtube.com/watch?v=yCcSP3GQhho"><img src="http://i2.ytimg.com/vi/yCcSP3GQhho/default.jpg" /></a>
-
 An Introduction to Scraping
 ====
+<a href="http://www.youtube.com/watch?v=yCcSP3GQhho"><img src="http://i2.ytimg.com/vi/yCcSP3GQhho/default.jpg" /></a>
 
 # What's the question?
 
