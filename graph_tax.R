@@ -13,9 +13,7 @@ chicago_total <- ts(chicago_total$x, c(1999,3), c(2012,2), 4)
 chicago_total <- chicago_total/chicago_rate
 
 
-png('sales.png')
 plot(chicago_total/1000000000, ylab="Dollars, billions", main="Taxable Sales in Chicago")
-dev.off()
 
 chicago_payers <- aggregate(chicago_tax$number_taxpayers,
                             by=list(paste(chicago_tax$year,
@@ -24,6 +22,4 @@ chicago_payers <- aggregate(chicago_tax$number_taxpayers,
 
 chicago_payers <- ts(chicago_payers$x, c(1999,3), c(2012,2), 4)
 
-png('retailers.png')
 plot(chicago_payers, main="Retailers in Chicago")
-dev.off()

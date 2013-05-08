@@ -63,6 +63,8 @@ for tax in taxes :
   tax_rows = tax_rows.replace('</td>', '')
   tax_rows = tax_rows.replace(',', '')
 
+  #print tax_rows
+
   # split the string into a list at the newlines
   tax_rows = tax_rows.split('\n')
 
